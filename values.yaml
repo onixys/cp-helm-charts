@@ -4,7 +4,7 @@
 cp-zookeeper:
   enabled: true
   servers: 3
-  image: confluentinc/cp-zookeeper
+  image: onixys/cp-zookeeper
   imageTag: 5.2.2
   ## Optionally specify an array of imagePullSecrets. Secrets must be manually created in the namespace.
   ## https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
@@ -39,7 +39,7 @@ cp-zookeeper:
 cp-kafka:
   enabled: true
   brokers: 3
-  image: confluentinc/cp-enterprise-kafka
+  image: onixys/cp-kafka
   imageTag: 5.2.2
   ## Optionally specify an array of imagePullSecrets. Secrets must be manually created in the namespace.
   ## https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
@@ -66,7 +66,7 @@ cp-kafka:
 ## ------------------------------------------------------
 cp-schema-registry:
   enabled: true
-  image: confluentinc/cp-schema-registry
+  image: onixys/cp-schema-registry
   imageTag: 5.2.2
   ## Optionally specify an array of imagePullSecrets. Secrets must be manually created in the namespace.
   ## https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
@@ -88,7 +88,7 @@ cp-schema-registry:
 ## ------------------------------------------------------
 cp-kafka-rest:
   enabled: true
-  image: confluentinc/cp-kafka-rest
+  image: onixys/cp-kafka-rest
   imageTag: 5.2.2
   ## Optionally specify an array of imagePullSecrets. Secrets must be manually created in the namespace.
   ## https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
@@ -109,8 +109,8 @@ cp-kafka-rest:
 ## Kafka Connect
 ## ------------------------------------------------------
 cp-kafka-connect:
-  enabled: true
-  image: confluentinc/cp-kafka-connect
+  enabled: false
+  image: onixys/cp-kafka-connect
   imageTag: 5.2.2
   ## Optionally specify an array of imagePullSecrets. Secrets must be manually created in the namespace.
   ## https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
@@ -131,8 +131,8 @@ cp-kafka-connect:
 ## KSQL Server
 ## ------------------------------------------------------
 cp-ksql-server:
-  enabled: true
-  image: confluentinc/cp-ksql-server
+  enabled: false
+  image: onixys/cp-ksql-server
   imageTag: 5.2.2
   ## Optionally specify an array of imagePullSecrets. Secrets must be manually created in the namespace.
   ## https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
@@ -146,8 +146,8 @@ cp-ksql-server:
 ## Control Center
 ## ------------------------------------------------------
 cp-control-center:
-  enabled: true
-  image: confluentinc/cp-enterprise-control-center
+  enabled: false
+  image: onixys/cp-enterprise-control-center
   imageTag: 5.2.0
   ## Optionally specify an array of imagePullSecrets. Secrets must be manually created in the namespace.
   ## https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
